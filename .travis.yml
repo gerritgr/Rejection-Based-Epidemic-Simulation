@@ -1,0 +1,20 @@
+#dist: trusty
+#language: rust
+#rust:
+#  - 1.1.0
+#install:
+#  - cd rust_reject && cargo build --release
+#  - cd ..
+#  - ls
+#  - cd rust_reject && cargo build --release
+language: python
+sudo: required
+python:
+  - "3.6"
+install:
+  - sudo curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+  - cd rust_reject && cargo build --release
+  - cd ..
+script:
+  - ./rust_reject/target/release/rust_reject example_networks/gamma_2.0_nodes_1000.txt out_trajectory.txt
+
