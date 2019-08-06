@@ -9,9 +9,9 @@ Install Rust with:
 ```sh
 curl https://sh.rustup.rs -sSf | sh
 ```
-Compile the Rust code (in the rust_ssa folder) with:
+Compile the Rust code (in the rust_reject folder) with:
 ```sh
-cd rust_ssa && cargo build --release
+cd rust_reject && cargo build --release
 ```
 
 ## Usage
