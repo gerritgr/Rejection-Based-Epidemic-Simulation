@@ -208,7 +208,7 @@ fn setup_graph(
         Err(_why) => panic!("couldn't read graphfile"),
         Ok(_) => (),
     }
-    let lines = s.split("\n");
+    let lines = s.lines();
     let mut label: State;
     let mut counter: usize = 0;
     let mut degree: usize;
